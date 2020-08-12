@@ -54,15 +54,20 @@ if ( NOT DEFINED CMAKE_MODULE_PATH )
 endif ()
 
 ## Include common cmake modules
-include ( utils )
+#include ( utils )
 include ( GNUInstallDirs )
 
 ## Setup the package version.
-get_version ( "1.0.0" )
+#get_version ( "1.0.0" )
 
-set ( BUILD_VERSION_MAJOR ${VERSION_MAJOR} )
-set ( BUILD_VERSION_MINOR ${VERSION_MINOR} )
-set ( BUILD_VERSION_PATCH ${VERSION_PATCH} )
+#set ( BUILD_VERSION_MAJOR ${VERSION_MAJOR} )
+# set ( BUILD_VERSION_MINOR ${VERSION_MINOR} )
+# set ( BUILD_VERSION_PATCH ${VERSION_PATCH} )
+
+set ( BUILD_VERSION_MAJOR 1 )
+set ( BUILD_VERSION_MINOR 0 )
+set ( BUILD_VERSION_PATCH 0 )
+
 
 set ( LIB_VERSION_MAJOR 1)
 set ( LIB_VERSION_MINOR 0)
@@ -215,4 +220,4 @@ set ( CPACK_RPM_POST_UNINSTALL_SCRIPT_FILE "${CMAKE_CURRENT_SOURCE_DIR}/RPM/rpm_
 # CPACK_PACKAGING_INSTALL_PREFIX is needed in libhsakmt.pc.in
 configure_file ( libhsakmt.pc.in ${DEV_BUILD_DIR}/libhsakmt.pc @ONLY )
 
-include ( CPack )
+# include ( CPack )
